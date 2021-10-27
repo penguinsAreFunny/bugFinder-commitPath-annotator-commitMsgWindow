@@ -1,0 +1,48 @@
+{
+  "name": "bugfinder-commitpath-annotator-commitmsgwindow",
+  "version": "0.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "npm run clean && tsc --project .",
+    "clean": "rimraf ./dist",
+    "prepare": "npm run build",
+    "version": "npm run build && git add -A dist",
+    "postversion": "git push && git push --tags",
+    "pack": "npm pack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/penguinsAreFunny/bugFinder-commitPath-annotator-commitmsgpredecessors"
+  },
+  "homepage": "https://github.com/penguinsAreFunny/bugFinder-commitPath-annotator-commitmsgpredecessors#readme",
+  "bugs": {
+    "url": "https://github.com/penguinsAreFunny/bugFinder-commitPath-annotator-commitmsgpredecessors/issues"
+  },
+  "files": [
+    "dist/**/*"
+  ],
+  "author": "Robert Klinger",
+  "keyword": "bugfinder",
+  "license": "ISC",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.26.1",
+    "@typescript-eslint/eslint-plugin-tslint": "^4.26.1",
+    "@typescript-eslint/parser": "^4.26.1",
+    "inversify": "^5.1.1",
+    "reflect-metadata": "^0.1.13",
+    "rimraf": "^3.0.2",
+    "source-map-support": "^0.5.19",
+    "ts-log": "^2.2.3",
+    "typescript": "^4.4.3",
+    "underscore": "^1.13.1"
+  },
+  "dependencies": {
+    "@types/node": "^15.12.2",
+    "bugfinder-commitpath-annotator-commitmsg": "^2.5.0",
+    "bugfinder-framework": "^9.7.0",
+    "bugfinder-localityrecorder-commit": "^2.1.0",
+    "bugfinder-localityrecorder-commitpath": "^1.19.0"
+  }
+}
