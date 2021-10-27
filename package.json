@@ -14,11 +14,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/penguinsAreFunny/bugFinder-commitPath-annotator-commitmsgpredecessors"
+    "url": "git+https://github.com/penguinsAreFunny/bugFinder-commitPath-annotator-commitMsgWindow"
   },
-  "homepage": "https://github.com/penguinsAreFunny/bugFinder-commitPath-annotator-commitmsgpredecessors#readme",
+  "homepage": "https://github.com/penguinsAreFunny/bugFinder-commitPath-annotator-commitMsgWindow#readme",
   "bugs": {
-    "url": "https://github.com/penguinsAreFunny/bugFinder-commitPath-annotator-commitmsgpredecessors/issues"
+    "url": "https://github.com/penguinsAreFunny/bugFinder-commitPath-annotator-commitMsgWindow/issues"
   },
   "files": [
     "dist/**/*"

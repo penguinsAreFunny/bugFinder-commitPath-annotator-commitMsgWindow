@@ -6,7 +6,7 @@ import {Logger} from "ts-log";
 import _ from "underscore"
 
 @injectable()
-export class CommitPathsPredecessorsAnnotator implements Annotator<CommitPath, number> {
+export class CommitPathsWindowAnnotator implements Annotator<CommitPath, number> {
     @inject(BUGFINDER_COMMITPATH_ANNOTATOR_COMMITMSGPREDECESSORS_TYPES.commitPathAnnotator)
     commitPathAnnotator: Annotator<CommitPath, number>
 

@@ -37,7 +37,7 @@ and installing it:
     
 # Usage
 This package is not intended to be used independently, but feel free to do so. Instead of Dependency Injection you can
-just create instances of the Annotator with ```new CommitPathsPredecessorsAnnotator(...)```.
+just create instances of the Annotator with ```new CommitPathsWindowAnnotator(...)```.
 
 The following example read CommitPaths from a MongoDB and annotates them with consideration of up to 5 predecessor
 CommitPaths
@@ -64,7 +64,7 @@ import {
     BUGFINDER_COMMITPATH_ANNOTATOR_COMMITMSG_TYPES, CommitPathsAnnotator,
 } from "bugfinder-commitpath-annotator-commitmsg";
 import {annotatorContainer} from "bugfinder-framework-defaultContainer";
-import {CommitPathsPredecessorsAnnotator} from "bugfinder-commitpath-annotator-commitmsgpredecessors";
+import {CommitPathsWindowAnnotator} from "bugfinder-commitpath-annotator-commitmsgpredecessors";
 import {BUGFINDER_COMMITPATH_ANNOTATOR_COMMITMSGPREDECESSORS_TYPES}
     from "bugfinder-commitpath-annotator-commitmsgpredecessors";
 
@@ -76,7 +76,7 @@ const mongoDBConfig: MongoDBConfig = {
 const testFileMatcher = /(test?\/.*\.*)/
 
 // binding Annotator and its dependencies
-container.bind<Annotator<CommitPath, number>>(ANNOTATOR_TYPES.annotator).to(CommitPathsPredecessorsAnnotator)
+container.bind<Annotator<CommitPath, number>>(ANNOTATOR_TYPES.annotator).to(CommitPathsWindowAnnotator)
 container.bind<number>(BUGFINDER_COMMITPATH_ANNOTATOR_COMMITMSGPREDECESSORS_TYPES.n).toConstantValue(5)
 container.bind<boolean>(BUGFINDER_COMMITPATH_ANNOTATOR_COMMITMSGPREDECESSORS_TYPES.upToN).toConstantValue(true)
 container.bind<Annotator<CommitPath, number>>(
