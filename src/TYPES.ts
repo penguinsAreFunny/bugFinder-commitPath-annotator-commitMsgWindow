@@ -1,6 +1,9 @@
-export const BUGFINDER_COMMITPATH_ANNOTATOR_COMMITMSGPREDECESSORS_TYPES = {
+export const BUGFINDER_COMMITPATH_ANNOTATOR_COMMITMSGWINDOW_TYPES = {
     commitPathAnnotator:    Symbol("CommitPathAnnotator"),
-    n:                      Symbol("N"),
+    nPre:                   Symbol("N"),
+    nPost:                  Symbol("nPost"),
+    useCurrent:             Symbol("UseCurrent"),
     upToN:                  Symbol("UpToN"),
-    uniqueMode:             Symbol("UniqueMode")
+    uniqueModePre:          Symbol("UniqueModePre"),
+    uniqueModePost:         Symbol("UniqueModePost")
 }
